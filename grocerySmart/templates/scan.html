@@ -12,21 +12,11 @@ div.card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
   border-radius: 8px;
-  top: -160px;
+  top: -170px;
+  padding-top: 25px;
 }
 
 div.container {
-  padding: 10px;
-  font-family: Arial;
-}
-
-div.card2 {
-  width: 250px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-align: center;
-}
-
-div.container2 {
   padding: 10px;
   font-family: Arial;
 }
@@ -40,56 +30,56 @@ div.container2 {
   font-size: 14px; /* Set a font size */
   cursor: pointer; /* Mouse pointer on hover */
 }
-	.btn:hover {
-	  background-color: #2E8B57;
-	}
-	.btn {border-radius: 8px;}
+  .btn:hover {
+    background-color: #2E8B57;
+  }
+  .btn {border-radius: 8px;}
 
-	/*Upload Photo Button*/
-	.btn1 {
-	  background-color: #72b250; 
-	  border: none; /* Remove borders */
-	  color: white; /* White text */
-	  padding: 36px 58px; /* Some padding */
-	  font-size: 14px; /* Set a font size */
-	  cursor: pointer; /* Mouse pointer on hover */
-	}
-	.btn1:hover {
-	  background-color: #2E8B57;
-	}
-	.btn1 {border-radius: 8px;}
+  /*Upload Photo Button*/
+  .btn1 {
+    background-color: #72b250; 
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 36px 58px; /* Some padding */
+    font-size: 14px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+  }
+  .btn1:hover {
+    background-color: #2E8B57;
+  }
+  .btn1 {border-radius: 8px;}
 
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
 }
-	th, td {
-	  padding: 10px;
-	  text-align: center;
-	  font-family: Arial;
-	}
+  th, td {
+    padding: 10px;
+    text-align: center;
+    font-family: Arial;
+  }
 
-	table#t01 tr:nth-child(even) {
-	  background-color: #eee;
-	}
-	table#t01 tr:nth-child(odd) {
-	  background-color: #fff;
-	}
-	table#t01 th {
-	  background-color: #72b250;
-	  color: white;
-	}
+  table#t01 tr:nth-child(even) {
+    background-color: #eee;
+  }
+  table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+  }
+  table#t01 th {
+    background-color: #72b250;
+    color: white;
+  }
 
-	#rcorners {
-	  border-radius: 25px;
-	}
+  #rcorners {
+    border-radius: 25px;
+  }
 
-	table {
-	  position: relative;
-	  left: 160px;
-	  width: 400px;
-	  top: 200px;
-	}
+  table {
+    position: relative;
+    left: 160px;
+    width: 400px;
+    top: 200px;
+  }
 
 header {
     background-color: #52a32a;
@@ -139,7 +129,7 @@ header {
 </style>
 </head>
 <body>
-	 <header>
+   <header>
         <nav>
             <ul>
                 <li><p>Grocery Smart</p></li>
@@ -153,11 +143,16 @@ header {
     </header>
 
 <table style="width:30%" id="t01">
+  
   <tr>
+    <div class = "theader">
     <th>Ingredient</th>
     <th>Best Eaten Within</th> 
+    </div>
   </tr>
+  
   <tr>
+     <div class = "tbody">
     <td>Bananas</td>
     <td>5 Days</td>
   </tr>
@@ -188,13 +183,16 @@ header {
   <tr>
     <td>...</td> 
     <td>...</td> 
+    </div>
   </tr>
+  
 </table>
+
 
 <div class="card">
   <div class="header">
     <button class="btn1"><i class="fa fa-camera fa-3x"></i> <br>Take Photo</button></br> </button>
-	<button class="btn"><i class="fa fa-upload fa-3x"></i> <br>Upload Photo</button></br> </button>
+  <button class="btn"><i class="fa fa-upload fa-3x"></i> <br>Upload Photo</button></br> </button>
 </div>
 <div class="container">
     <p>Upload or take a photo of your receipt to scan the products!</p>
