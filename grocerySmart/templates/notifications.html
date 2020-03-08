@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        header {
+    background-color: #52a32a;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 5px #387619, 0px 5px 25px black;
+}
+
+    header * {
+        display: inline-block;
+        font-family: Arial;
+    }
+
+    header li {
+        margin: 20px;
+    }
+        header li a {
+            color: white;
+            text-decoration: none;
+            margin-bottom:5px;
+            font-size:20px;
+            font-family: Arial;
+        }
+        header li a:hover {
+            color:#b0fa8c;
+        }
+        header li p {
+            color: #204f0a;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 30px;
+            margin: 0px;
+        }
+
+#activePage {
+    color: #254615;
+    font-weight: bolder;
+}
+    </style>
+	<title></title>
+</head>
+<body>
+	 <header>
+        <nav>
+            <ul>
+                <li><p>Grocery Smart</p></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="scan">Scan Receipt</a></li>
+                <li><a href="foodConsumption">Food Consumption</a></li>
+                <li><a href="fridge">Fridge</a></li>
+                <li><a id="activePage" href="notifications">Notifications</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
