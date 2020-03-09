@@ -1,66 +1,84 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-    <style>
-        header {
-    background-color: #52a32a;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    box-shadow: 0px 5px #387619, 0px 5px 25px black;
-}
-
-    header * {
-        display: inline-block;
-        font-family: Arial;
-    }
-
-    header li {
-        margin: 20px;
-    }
-        header li a {
-            color: white;
-            text-decoration: none;
-            margin-bottom:5px;
-            font-size:20px;
-            font-family: Arial;
-        }
-        header li a:hover {
-            color:#b0fa8c;
-        }
-        header li p {
-            color: #204f0a;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 30px;
-            margin: 0px;
-        }
-
-#activePage {
-    color: #254615;
-    font-weight: bolder;
-}
-    </style>
-	<title></title>
+    <title>Grocery Smart</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./StyleSheet1.css">
+    <link rel="stylesheet" href="./bootstrap.css">
 </head>
+
 <body>
-	 <header>
+    <header>
+        <!-- navbar -->
         <nav>
             <ul>
                 <li><p>Grocery Smart</p></li>
-                <li><a href="/">Home</a></li>
-                <li><a href="scan">Scan Receipt</a></li>
-                <li><a href="foodConsumption">Food Consumption</a></li>
-                <li><a href="fridge">Fridge</a></li>
-                <li><a id="activePage" href="notifications">Notifications</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#scanUpload">Scan/Upload</a></li>
+                <li><a href="#foodConsumption">Food Consumption</a></li>
+                <li><a href="#availableFood">Available Food</a></li>
+                <li><a id="activePage" href="#notifications">Notifications</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- info and advice cards -->
+    <div class="card mb-3" style="max-width: 50rem; margin: 0 auto; margin-top:6em; border-color: #1fa525;">
+        <div class="card-header" style="background-color: rgba(45, 155, 50, 0.2); color: green; border-color: #1fa525;">Great work!</div>
+        <div class="card-body text-danger" style="padding-bottom:5px;">
+            <h5 class="card-title" style="color:green;">You achieved your 'Fruits' serving goal for the week! Keep it up!</h5>
+        </div>
+        <div class="card-footer text-muted" style="border-color: #1fa525;">
+            30 minutes ago
+        </div>
+    </div>
+    <div class="card border-secondary mb-3" style="max-width: 50rem; margin: 0 auto;">
+        <div class="card-header" style="background-color: rgba(106,121,138, 0.2); color: #6a798a; border-color: #6c757d;">Take The Hint</div>
+        <div class="card-body text-secondary" style="padding-bottom:5px;">
+            <h5 class="card-title" style="color:slategrey;">You should eat some fruits! You haven't had any in 2 days.</h5>
+        </div>
+        <div class="card-footer text-muted" style="border-color: #6c757d;">
+            2 hours ago
+        </div>
+    </div>
+    <div class="card border-danger mb-3" style="max-width: 50rem; margin: 0 auto;">
+        <div class="card-header" style="background-color: rgba(255, 0, 0, 0.2); color: darkred; border-color:red;">Expiration Alert</div>
+        <div class="card-body text-danger" style="padding-bottom:5px;">
+            <h5 class="card-title">Your 3 remaining portions of raw chicken breast are about to expire.</h5>
+        </div>
+        <div class="card-footer text-muted" style="border-color:red;">
+            4 hour ago
+        </div>
+    </div>
+    <div class="card border-secondary mb-3" style="max-width: 50rem; margin: 0 auto;">
+        <div class="card-header" style="background-color: rgba(106,121,138, 0.2); color: #6a798a; border-color: #6c757d;">Take The Hint</div>
+        <div class="card-body text-secondary" style="padding-bottom:5px;">
+            <h5 class="card-title" style="color:slategrey;">You finished all of your chicken in 4 days last week. Buy more chicken next week.</h5>
+        </div>
+        <div class="card-footer text-muted" style="border-color: #6c757d;">
+            16 hours ago
+        </div>
+    </div>
+    <div class="card border-warning mb-3" style="max-width: 50rem; margin: 0 auto;">
+        <div class="card-header border-warning" style="background-color: rgba(255,252,0, 0.2); color: darkgoldenrod;">Notice</div>
+        <div class="card-body text-warning" style="padding-bottom:5px;">
+            <h5 class="card-title" style="color:goldenrod;">You have 3 bananas left for the week.</h5>
+        </div>
+        <div class="card-footer border-warning text-muted">
+            20 hours ago
+        </div>
+    </div>
+    <div class="card border-danger mb-3" style="max-width: 50rem; margin: 0 auto;">
+        <div class="card-header" style="background-color: rgba(255, 0, 0, 0.2); color: darkred; border-color:red;">Expiration Alert</div>
+        <div class="card-body text-danger" style="padding-bottom:5px;">
+            <h5 class="card-title">Your oranges are probably going bad, eat them sooner than later.</h5>
+        </div>
+        <div class="card-footer text-muted" style="border-color:red;">
+            24 hour ago
+        </div>
+    </div>
 </body>
 </html>
+
+

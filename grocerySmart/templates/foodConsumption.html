@@ -1,66 +1,253 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title></title>
-    <style>
-        header {
-    background-color: #52a32a;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    box-shadow: 0px 5px #387619, 0px 5px 25px black;
-}
+    <title>Grocery Smart</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./StyleSheet1.css">
+    <link rel="stylesheet" href="./bootstrap.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-    header * {
-        display: inline-block;
-        font-family: Arial;
-    }
+    <!-- Pie Chart -->
+    <script type="text/javascript">
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Food Group', 'Servings'],
+                ['Meat & Poultry', 14],
+                ['Vegetables', 23],
+                ['Fruits', 13],
+                ['Dairy', 18],
+                ['Grain', 27],
+                ['Snacks', 12]
 
-    header li {
-        margin: 20px;
-    }
-        header li a {
-            color: white;
-            text-decoration: none;
-            margin-bottom:5px;
-            font-size:20px;
-            font-family: Arial;
-        }
-        header li a:hover {
-            color:#b0fa8c;
-        }
-        header li p {
-            color: #204f0a;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 30px;
-            margin: 0px;
-        }
+            ]);
 
-#activePage {
-    color: #254615;
-    font-weight: bolder;
-}
-    </style>
+            var options = {
+                title: 'Your Weekly Consumption (by servings)',
+                is3D: true,
+                slices: {
+                    0: { color: '#dc3912' },
+                    1: { color: '#109618' },
+                    3: { color: '#3366cc' },
+                    4: { color: '#9a6d25' },
+                    5: { color: '#990099' }
+                }
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+
+    <!-- Bar Graph -->
+    <script type="text/javascript">
+        google.charts.load("current", { packages: ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Food Group', 'Servings Wasted', { role: 'style' }, { role: 'annotation' }],
+                ['Meat & Poultry', 2, 'color: #dc3912;', '2 Servings'],
+                ['Vegetables', 5, 'color: #109618;', '5 Servings'],
+                ['Fruits', 3, 'color: #ff9900; ', '3 Servings'],
+                ['Dairy', 0, 'color: #3366cc; ', '0 Servings'],
+                ['Grain', 2, 'color: #9a6d25;', '2 Servings'],
+                ['Snacks', 0, 'color: #990099;', '0 Servings']
+            ]);
+
+            var options = {
+                title: "Your Weekly Waste (by servings)",
+                width: 1300,
+                height: 500,
+                bar: { groupWidth: "95%" },
+                legend: { position: "none" },
+                animation: {
+                    startup: true,
+                    duration: 6500,
+                    easing: 'out',
+                },
+                annotations: {
+                    textStyle: {
+                        fontSize: 18,
+                        bold: true,
+
+                    }
+                }
+            };
+            var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+            chart.draw(data, options);
+        }
+    </script>
 </head>
+
 <body>
-	 <header>
+    <header>
+        <!-- navbar -->
         <nav>
             <ul>
                 <li><p>Grocery Smart</p></li>
-                <li><a href="/">Home</a></li>
-                <li><a href="scan">Scan Receipt</a></li>
-                <li><a id="activePage" href="foodConsumption">Food Consumption</a></li>
-                <li><a href="fridge">Fridge</a></li>
-                <li><a href="notifications">Notifications</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#scanUpload">Scan/Upload</a></li>
+                <li><a id="activePage" href="#foodConsumption">Food Consumption</a></li>
+                <li><a href="#availableFood">Available Food</a></li>
+                <li><a href="#notifications">Notifications</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- pie chart -->
+    <div class="pieChartFix" id="piechart" style="width: 1100px; height: 700px;"></div>
+
+    <!-- info and advice cards -->
+    <div class="row">
+        <div class="col-sm">
+            <div class="card text-white bg-meat" style="width: 30rem;">
+                <div class="card-header">
+                    Meat & Poultry
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">14 Servings</h5>
+                    <p class="card-text">{list of food and servings eaten that week}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card text-white bg-veg" style="width: 30rem;">
+                <div class="card-header">
+                    Vegetables
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title"> 23 Servings</h5>
+                    <p class="card-text">{list of food and servings eaten that week}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card text-white bg-fruit" style="width: 30rem;">
+                <div class="card-header">
+                    Fruits
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">13 Servings</h5>
+                    <p class="card-text">{list of food and servings eaten that week}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="padding-top:200px">
+        <div class="col-sm">
+            <div class="card text-white bg-dairy" style="width: 30rem;">
+                <div class="card-header">
+                    Dairy
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">18 Servings</h5>
+                    <p class="card-text">{list of food and servings eaten that week}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card text-white bg-grain" style="width: 30rem;">
+                <div class="card-header">
+                    Grain
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">27 Servings</h5>
+                    <p class="card-text">{list of food and servings eaten that week}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card text-white bg-snacks" style="width: 30rem;">
+                <div class="card-header">
+                    Snacks
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">12 Servings</h5>
+                    <p class="card-text">{list of food and servings eaten that week}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bar Graph -->
+    <div id="columnchart_values" style="width: 1300px; height: 500px; margin: auto;"></div>
+
+    <!-- info and advice cards -->
+    <div class="row" style="margin-top:-30px">
+        <div class="col-sm">
+            <div class="card text-white bg-meat" style="width: 30rem;">
+                <div class="card-header">
+                    Meat & Poultry
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">2 Servings</h5>
+                    <p class="card-text">{list of food and servings eaten that week}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card text-white bg-veg" style="width: 30rem;">
+                <div class="card-header">
+                    Vegetables
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title"> 5 Servings</h5>
+                    <p class="card-text">{list of food and servings eaten that week}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card text-white bg-fruit" style="width: 30rem;">
+                <div class="card-header">
+                    Fruits
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">3 Servings</h5>
+                    <p class="card-text">{list of food and servings eaten that week}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="padding-top:200px; padding-bottom: 70px;">
+        <div class="col-sm">
+            <div class="card text-white bg-dairy" style="width: 30rem;">
+                <div class="card-header">
+                    Dairy
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">0 Servings</h5>
+                    <p class="card-text">Great work this week!</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card text-white bg-grain" style="width: 30rem;">
+                <div class="card-header">
+                    Grain
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">2 Servings</h5>
+                    <p class="card-text">{list of food and servings eaten that week}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card text-white bg-snacks" style="width: 30rem;">
+                <div class="card-header">
+                    Snacks
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">0 Servings</h5>
+                    <p class="card-text">Great work this week!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
+
+
