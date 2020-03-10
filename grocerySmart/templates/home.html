@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	 <style>
-        header {
+    <title></title>
+     <style>
+    header {
     background-color: #52a32a;
     position: fixed;
     z-index: 1;
@@ -42,25 +43,62 @@
             font-size: 30px;
             margin: 0px;
         }
+    article p{
+        position: absolute;
+        top: 120px;
+        width: 350px;
+        left: 150px;
+        color: black;
+        text-decoration: none;
+        margin-top:100px;
+        font-size:16px;
+        font-family: Arial; 
+    }
 
 #activePage {
     color: #254615;
     font-weight: bolder;
 }
+
     </style>
 </head>
 <body>
-	 <header>
+      <header>
+        <!-- navbar -->
         <nav>
             <ul>
                 <li><p>Grocery Smart</p></li>
-                <li><a id="activePage" href="/">Home</a></li>
-                <li><a href="scan">Scan Receipt</a></li>
+                <li><a id="activePage" href="home">Home</a></li>
+                <li><a href="scan">Import Groceries</a></li>
                 <li><a href="foodConsumption">Food Consumption</a></li>
                 <li><a href="fridge">Fridge</a></li>
                 <li><a href="notifications">Notifications</a></li>
+                <li style=" padding-top:0; position:absolute; top:0.5em; right:6em;"><a href="profile">John Doe</a></l>
+                <li style=" padding-top:0; margin-top:0px; padding-bottom:1em; position: absolute; top:0.5em; right:1em;"><img style="height:4em; width: 4em; " src="https://cdn4.iconfinder.com/data/icons/avatar-circle-1-1/72/39-512.png"></li>
             </ul>
         </nav>
     </header>
+</body>
+<body>
+
+    <div style="padding-top:13rem; display: flex; justify-content:center;">
+        <p style=" width: 500px; height: 400px; float: left; padding-right:40px; padding-top:20px; font-family:sans-serif; line-height:30px; text-align:center; font-weight:bold">
+            The world has an ongoing climate crisis, and being
+            aware of your carbon footprint is becoming more
+            relevant. For the typical student, being conscious of
+            your carbon footprint is usually not a top priority.
+            Being aware of where foods are coming from is a lot
+            of work, and sourcing more environmentally friendly
+            alternatives can be even more work. Although students
+            would like to be more conscious of their footprint,
+            the relevant information is not accessable enough to
+            fit into a busy lifestyle. Grocery Smart's goal is to
+            fill this void and provide users with a user friendly
+            way to track their grocery habits in order to reduce
+            waste and lower their carbon footprint.
+        </p>
+        <img src="https://thumbor.thedailymeal.com/quKJV0-eCf6aIuS8f0c_6dbRgXs=/870x565/filters:focal(948x724:949x725)/https://www.thedailymeal.com/sites/default/files/2019/08/13/0_Hero_Image_Shutterstock.jpg" alt="Groceries"
+             style=" width: 600px; height: 400px;">
+    </div>
 </body>
 </html>

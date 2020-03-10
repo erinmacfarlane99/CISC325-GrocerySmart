@@ -15,6 +15,7 @@
     display: flex;
     align-items: center;
     box-shadow: 0px 5px #387619, 0px 5px 25px black;
+    font-family: Arial;
 }
 
     header * {
@@ -93,7 +94,7 @@
          }
 
          .box {
-             background-color: #72b250;
+            
              text-align: center;
              text-anchor: start;
              border-radius: 25px 25px 0px 0px;
@@ -101,9 +102,23 @@
              height: 50px;
          }
 
+         /*colours for boxes*/ 
+         #m {background-color: #dc3912;} /*meat*/
+         #v{background-color: #109618;} /*veg*/
+         #f{background-color: #ff9900;} /*fruit*/
+         #d{background-color: #3366cc;} /*dairy*/
+         #g{background-color: #9a6d25;} /*grains*/
+         #s{background-color: #990099;} /*snacks*/
+         #background{background-color: #F8F8F8;} /*grey box background*/
 
          h2 {
-             line-height: 15px;
+             line-height: 10px;
+             top: -300px;
+             font-family: Arial;
+         }
+
+         h3 {
+            font-family: Arial;
          }
 
          .button1 {
@@ -112,12 +127,13 @@
              position: relative;
              background-color: white;
              border-radius: 8px;
-
-
-          .btn:hover {
-            background-color: #2E8B57;
+             cursor:pointer;
+        }
+        .button1:hover {
+             background-color: #2E8B57;
          }
-    
+        .button1 {border-radius: 8px;}
+
     </style>
 </head>
 <body>
@@ -126,18 +142,27 @@
         <nav>
             <ul>
                 <li><p>Grocery Smart</p></li>
+<<<<<<< HEAD
+                <li><a href="/">Home</a></li>
+                <li><a href="scan">Import Groceries</a></li>
+                <li><a href="foodConsumption">Food Consumption</a></li>
+                <li><a id="activePage" href="fridge">Fridge</a></li>
+                <li><a href="notifications">Notifications</a></li>
+               <li style=" padding-top:0; position:absolute; top:0.5em; right:6em;"><a href="profile">John Doe</a></li>
+=======
                 <li><a href="home">Home</a></li>
                 <li><a href="scan">Scan/Upload</a></li>
                 <li><a href="foodConsumption">Food Consumption</a></li>
                 <li><a id="activePage" href="fridge">Fridge</a></li>
                 <li><a href="notifications">Notifications</a></li>
                 <li style=" padding-top:0; position:absolute; top:0.5em; right:6em;"><a href="profile">John Doe</a></li>
+>>>>>>> a6282b5925fe80fe5793ab274d0486db5382818d
                 <li style=" padding-top:0; margin-top:0px; padding-bottom:1em; position: absolute; top:0.5em; right:1em;"><img style="height:4em; width: 4em; " src="https://cdn4.iconfinder.com/data/icons/avatar-circle-1-1/72/39-512.png"></li>
             </ul>
         </nav>
     </header>
 	
-	        <h2>Fridge</h2>
+	        <h2 style="padding-top:100px"> Fridge </h2>
         <h3>Click on a category for a more detailed view!</h3>
 
         <p></p>
@@ -171,7 +196,7 @@
 
             <div class="details" id="vegetables">
                 <div class=" item">Item</div>
-                <div class=" item">Expiry Date</div>>
+                <div class=" item">Expiry Date</div>
                 <div class="item">Cucumbers</div>
                 <div class="item">March 12th</div>
                 <div class="item">Carrots</div>
@@ -213,10 +238,10 @@
         </div>
 
         <div class="grid-container">
-            <div class="grid-item">
-                <div class="box">
+            <div class="grid-item" id="background">
+                    <div class="box" id="g">
                     <h2>Grains</h2>
-                    <button class="button1" onclick="open1()">edit</button>
+                    <button class="button1" onclick="open1()">view</button>
                 </div>
                 <ul style="list-style-type:circle;">
                     <li>Bread</li>
@@ -224,10 +249,10 @@
                     <li>Rice</li>
                 </ul>
             </div>
-            <div class="grid-item">
-                <div class="box">
+            <div class="grid-item" id="background">
+                <div class="box" id="f">
                     <h2>Fruit</h2>
-                    <button class="button1" onclick="open2()">edit</button>
+                    <button class="button1" onclick="open2()">view</button>
                 </div>
                 <ul style="list-style-type:circle;">
                     <li>Apples</li>
@@ -237,10 +262,10 @@
                 </ul>
             </div>
 
-            <div class="grid-item">
-                <div class="box">
+            <div class="grid-item" id="background">
+                <div class="box" id="v">
                     <h2>Vegetables</h2>
-                    <button class="button1" onclick="open3()">edit</button>
+                    <button class="button1" onclick="open3()">view</button>
                 </div>
                 <ul style="list-style-type:circle;">
                     <li>Cucumber</li>
@@ -249,10 +274,10 @@
                 </ul>
             </div>
 
-            <div class="grid-item">
-                <div class="box">
+            <div class="grid-item" id="background">
+                <div class="box" id="m">
                     <h2>Meat/Protein</h2>
-                    <button class="button1" onclick="open4()">edit</button>
+                    <button class="button1" onclick="open4()">view</button>
                 </div>
                 <ul style="list-style-type:circle;">
                     <li>Eggs</li>
@@ -260,10 +285,10 @@
                 </ul>
             </div>
 
-            <div class="grid-item">
-                <div class="box">
+            <div class="grid-item" id="background">
+                <div class="box" id="d">
                     <h2>Dairy</h2>
-                    <button class="button1" onclick="open5()">edit</button>
+                    <button class="button1" onclick="open5()">view</button>
                 </div>
                 <ul style="list-style-type:circle;">
                     <li>Milk</li>
@@ -272,10 +297,10 @@
                 </ul>
             </div>
 
-            <div class="grid-item">
-                <div class="box">
+            <div class="grid-item" id="background">
+                <div class="box" id="s">
                     <h2>Other</h2>
-                    <button class="button1" onclick="open6()">edit</button>
+                    <button class="button1" onclick="open6()">view</button>
                 </div>
                 <ul style="list-style-type:circle;">
                     <li>Tea</li>
