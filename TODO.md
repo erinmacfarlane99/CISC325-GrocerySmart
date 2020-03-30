@@ -10,6 +10,7 @@
 
 ### Erin
 - Return to home broken
+- Add functionality to the big 'Grocery Smart' label in the top bar as well. It could also just return home
 - Import groceries
 - Add food -> Have show up across import groceries and fridge pages
 
