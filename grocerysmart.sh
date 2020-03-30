@@ -7,7 +7,7 @@ echo "Dependencies Verified!"
 
 # Start flask application
 echo "Beginning flask application"
-export flask_app=flask_scan.py
+export flask_app=grocerysmart.py
 echo "Flask Application Started!"
 
 # Begin Program
