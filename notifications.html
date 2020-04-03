@@ -7,7 +7,7 @@
     <meta name="keywords" content="Gutim, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gutim | Template</title>
+    <title>Grocery Smart</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap"
@@ -72,6 +72,53 @@
     </section>
     <!-- Breadcrumb Section End -->
 
+    <!-- Notifications! -->
+    <section class="container-fluid">
+        <br>
+        <div id="notification1">
+            <div class="row" style="padding-top: 20">
+                <div class="col-lg-4"></div>
+                    <div class="col-lg-4" style="padding-top: 20">
+                        <div class="footer-banner-item set-bg" data-setbg="img/footer-banner/footer-banner-1.jpg" style="background-image: url(&quot;img/footer-banner/footer-banner-1.jpg&quot;);">
+                            <h2>Great Work!</h2>
+                            <p>You've added to your fridge 5 days in a row!</p>
+                            <a href="#" class="primary-btn" onclick="javascript:clearNotification1()">Clear</a>
+                        </div>
+                    </div>
+                <div class="col-lg-4"></div>
+            </div>
+        </div>
+        <br>
+        <div id="notification2">
+            <div class="row" style="padding-top: 20">
+                <div class="col-lg-4"></div>
+                    <div class="col-lg-4" style="padding-top: 20">
+                        <div class="footer-banner-item set-bg" data-setbg="img/footer-banner/footer-banner-1.jpg" style="background-image: url(&quot;img/footer-banner/footer-banner-1.jpg&quot;);">
+                            <h2>Notice</h2>
+                            <p>Your Chicken is going to expire Tomorrow</p>
+                            <a href="#" class="primary-btn" onclick="javascript:clearNotification2()">Clear</a>
+                        </div>
+                    </div>
+                <div class="col-lg-4"></div>
+            </div>
+        </div>
+        <br>
+        <div id="notification3">
+            <div class="row" style="padding-top: 20">
+                <div class="col-lg-4"></div>
+                    <div class="col-lg-4" style="padding-top: 20">
+                        <div class="footer-banner-item set-bg" data-setbg="img/footer-banner/footer-banner-1.jpg" style="background-image: url(&quot;img/footer-banner/footer-banner-1.jpg&quot;);">
+                            <h2>Great Work!</h2>
+                            <p>You've added to your fridge 5 days in a row!</p>
+                            <a href="#" class="primary-btn" onclick="javascript:clearNotification3()">Clear</a>
+                        </div>
+                    </div>
+                <div class="col-lg-4"></div>
+            </div>
+        </div>
+        <br>
+
+    </section>
     <!-- Footer Section Begin -->
     <footer class="footer-section">
         <div class="container">
@@ -102,6 +149,22 @@
     </footer>
     <!-- Footer Section End -->
 
+    <script>
+        function clearNotification1(){
+            console.log("removing notification")
+            document.getElementById('notification1').style.display="none";
+        }
+
+        function clearNotification2(){
+            console.log("removing notification")
+            document.getElementById('notification2').style.display="none";
+        }
+
+        function clearNotification3(){
+            console.log("removing notification")
+            document.getElementById('notification3').style.display="none";
+        }
+    </script>
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
