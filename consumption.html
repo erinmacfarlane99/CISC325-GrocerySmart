@@ -47,7 +47,7 @@
                         <li><a href="./contact.html">Contacts</a></li>
                     </ul>
                 </nav>
-                <a href="#" class="primary-btn signup-btn">Sign Up Today</a>
+                <a href="#" class="primary-btn signup-btn">Log in</a>
             </div>
             <div id="mobile-menu-wrap"></div>
         </div>
@@ -78,16 +78,17 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>Class Timetable</h2>
+                        <h2 style="padding-top: 30px;">What you've eaten this week (By Servings)</h2>
                     </div>
                     <div class="nav-controls">
                         <ul>
-                            <li class="active" data-tsfilter="all">All Class</li>
-                            <li data-tsfilter="gym">Gym</li>
-                            <li data-tsfilter="crossfit">Crossfit</li>
-                            <li data-tsfilter="cardio">Cardio</li>
-                            <li data-tsfilter="body">Body</li>
-                            <li data-tsfilter="yoga">Yoga</li>
+                            <li class="active" data-tsfilter="all">All Groups</li>
+                            <li data-tsfilter="fruit">Fruits</li>
+                            <li data-tsfilter="veg">Vegetables</li>
+                            <li data-tsfilter="grain">Grain</li>
+                            <li data-tsfilter="dairy">Dairy</li>
+                            <li data-tsfilter="meat">Meat & Alternatives</li>
+                            <li data-tsfilter="snacks">Snacks</li>
                         </ul>
                     </div>
                 </div>
@@ -98,7 +99,6 @@
                         <table>
                             <thead>
                                 <tr>
-                                    <th></th>
                                     <th>Monday</th>
                                     <th>Tuesday</th>
                                     <th>Wednesday</th>
@@ -110,166 +110,416 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="workout-time">10.00</td>
-                                    <td class="hover-bg ts-item" data-tsmeta="gym">
-                                        <h6>Gym</h6>
-                                        <span>10.00 - 11.00</span>
+                                    <td class="hover-bg ts-item" data-tsmeta="fruit">
+                                        <h6>Fruits</h6>
+                                        <span>8 servings</span>
                                         <div class="trainer-name">
-                                            John Smith
+                                            Strawberries (2) - 8am
+                                        </div>
+                                        <div class="trainer-name">
+                                            Apples (4) - 2pm
+                                        </div>
+                                        <div class="trainer-name">
+                                            Grapes (2) - 9pm
                                         </div>
                                     </td>
-                                    <td></td>
-                                    <td class="hover-bg ts-item" data-tsmeta="yoga">
-                                        <h6>Yoga</h6>
-                                        <span>10.00 - 12.00</span>
+                                    <td class="hover-bg ts-item" data-tsmeta="fruit">
+                                        <h6>Fruits</h6>
+                                        <span>0 servings</span>
                                         <div class="trainer-name">
-                                            John Smith
+                                            You can do better than that!
                                         </div>
                                     </td>
-                                    <td></td>
-                                    <td class="hover-bg ts-item" data-tsmeta="body">
-                                        <h6>Body</h6>
-                                        <span>10.00 - 12.00</span>
+                                    <td class="hover-bg ts-item" data-tsmeta="fruit">
+                                        <h6>Fruits</h6>
+                                        <span>3 servings</span>
                                         <div class="trainer-name">
-                                            John Smith
+                                            Strawberries (1) - 9am
+                                        </div>
+                                        <div class="trainer-name">
+                                            Apples (1) - 3pm
+                                        </div>
+                                        <div class="trainer-name">
+                                            Grapes (1) - 8pm
                                         </div>
                                     </td>
-                                    <td></td>
-                                    <td class="hover-bg ts-item" data-tsmeta="cardio">
-                                        <h6>Cardio</h6>
-                                        <span>10.00 - 11.00</span>
+                                    <td class="hover-bg ts-item" data-tsmeta="fruit">
+                                        <h6>Fruits</h6>
+                                        <span>0 servings</span>
                                         <div class="trainer-name">
-                                            John Smith
+                                            You can do better than that!
                                         </div>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td class="workout-time">14.00</td>
-                                    <td></td>
-                                    <td class="hover-bg ts-item">
-                                        <h6>Running</h6>
-                                        <span>14.00 - 16.00</span>
+                                    <td class="hover-bg ts-item" data-tsmeta="fruit">
+                                        <h6>Fruits</h6>
+                                        <span>1 serving</span>
                                         <div class="trainer-name">
-                                            John Smith
+                                            Oranges (1) - 4pm
                                         </div>
                                     </td>
-                                    <td></td>
-                                    <td class="hover-bg ts-item">
-                                        <h6>Box</h6>
-                                        <span>14.00 - 15.00</span>
+                                    <td class="hover-bg ts-item" data-tsmeta="fruit">
+                                        <h6>Fruits</h6>
+                                        <span>1 serving</span>
                                         <div class="trainer-name">
-                                            John Smith
+                                            Oranges (1) - 8am
                                         </div>
                                     </td>
-                                    <td></td>
-                                    <td class="hover-bg ts-item" data-tsmeta="gym">
-                                        <h6>Gym</h6>
-                                        <span>14.00 - 16.00</span>
+                                    <td class="hover-bg ts-item" data-tsmeta="fruit">
+                                        <h6>Fruits</h6>
+                                        <span>Log your Fruits for Today</span>
                                         <div class="trainer-name">
-                                            John Smith
-                                        </div>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td class="workout-time">16.00</td>
-                                    <td class="hover-bg ts-item" data-tsmeta="cardio">
-                                        <h6>Cardio</h6>
-                                        <span>16.00 - 18.00</span>
-                                        <div class="trainer-name">
-                                            John Smith
-                                        </div>
-                                    </td>
-                                    <td></td>
-                                    <td class="hover-bg ts-item" data-tsmeta="gym">
-                                        <h6>Gym</h6>
-                                        <span>16.00 - 19.00</span>
-                                        <div class="trainer-name">
-                                            John Smith
-                                        </div>
-                                    </td>
-                                    <td></td>
-                                    <td class="hover-bg ts-item" data-tsmeta="yoga">
-                                        <h6>Yoga</h6>
-                                        <span>16.00 - 18.00</span>
-                                        <div class="trainer-name">
-                                            John Smith
-                                        </div>
-                                    </td>
-                                    <td></td>
-                                    <td class="hover-bg ts-item" data-tsmeta="gym">
-                                        <h6>Gym</h6>
-                                        <span>16.00 - 20.00</span>
-                                        <div class="trainer-name">
-                                            John Smith
+                                            Head to the fridge
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="workout-time">18.00</td>
-                                    <td class="hover-bg ts-item">
-                                        <h6>Box</h6>
-                                        <span>18.00 - 22.00</span>
+                                    <td class="hover-bg ts-item" data-tsmeta="veg">
+                                        <h6>Vegtables</h6>
+                                        <span>5 servings</span>
                                         <div class="trainer-name">
-                                            John Smith
+                                            Cucumber (3) - 8am
+                                        </div>
+                                        <div class="trainer-name">
+                                            Carrot (2) - 8am
                                         </div>
                                     </td>
-                                    <td class="hover-bg ts-item" data-tsmeta="body">
-                                        <h6>Body</h6>
-                                        <span>18.00 - 20.00</span>
+                                    <td class="hover-bg ts-item" data-tsmeta="veg">
+                                        <h6>Vegtables</h6>
+                                        <span>7 servings</span>
                                         <div class="trainer-name">
-                                            John Smith
+                                            Cucumber (3) - 8am
+                                        </div>
+                                        <div class="trainer-name">
+                                            Carrot (4) - 10am
                                         </div>
                                     </td>
-                                    <td></td>
-                                    <td class="hover-bg ts-item" data-tsmeta="crossfit">
-                                        <h6>Crossfit</h6>
-                                        <span>18.00 - 21.00</span>
+                                    <td class="hover-bg ts-item" data-tsmeta="veg">
+                                        <h6>Vegtables</h6>
+                                        <span>0 servings</span>
                                         <div class="trainer-name">
-                                            John Smith
+                                            You can do better than that!
                                         </div>
                                     </td>
-                                    <td></td>
-                                    <td class="hover-bg ts-item" data-tsmeta="cardio">
-                                        <h6>Cardio</h6>
-                                        <span>18.00 - 22.00</span>
+                                    <td class="hover-bg ts-item" data-tsmeta="veg">
+                                        <h6>Vegtables</h6>
+                                        <span>3 servings</span>
                                         <div class="trainer-name">
-                                            John Smith
+                                            Red Pepper (2) - 8pm
+                                        </div>
+                                        <div class="trainer-name">
+                                            Green Pepper (1) - 8pm
                                         </div>
                                     </td>
-                                    <td></td>
+                                    <td class="hover-bg ts-item" data-tsmeta="veg">
+                                        <h6>Vegtables</h6>
+                                        <span>4 servings</span>
+                                        <div class="trainer-name">
+                                            Celery (2) - 2pm
+                                        </div>
+                                        <div class="trainer-name">
+                                            Green Pepper (2) - 8pm
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="veg">
+                                        <h6>Vegtables</h6>
+                                        <span>4 servings</span>
+                                        <div class="trainer-name">
+                                            Red Pepper (2) - 9pm
+                                        </div>
+                                        <div class="trainer-name">
+                                            Green Pepper (2) - 9pm
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="veg">
+                                        <h6>Vegtables</h6>
+                                        <span>Log your Vegetables for Today</span>
+                                        <div class="trainer-name">
+                                            Head to the fridge
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td class="workout-time">20.00</td>
-                                    <td></td>
-                                    <td class="hover-bg ts-item" data-tsmeta="gym">
-                                        <h6>Gym</h6>
-                                        <span>20.00 - 12.00</span>
+                                    <td class="hover-bg ts-item" data-tsmeta="grain">
+                                        <h6>Grain</h6>
+                                        <span>5 servings</span>
                                         <div class="trainer-name">
-                                            John Smith
+                                            Whole-Grain Bread (3) - 8am
+                                        </div>
+                                        <div class="trainer-name">
+                                            Bagels (2) - 3pm
                                         </div>
                                     </td>
-                                    <td class="hover-bg ts-item" data-tsmeta="body">
-                                        <h6>Body</h6>
-                                        <span>20.00 - 21.00</span>
+                                    <td class="hover-bg ts-item" data-tsmeta="grain">
+                                        <h6>Grain</h6>
+                                        <span>7 servings</span>
                                         <div class="trainer-name">
-                                            John Smith
+                                            Oatmeal (4) - 10am
+                                        </div>
+                                        <div class="trainer-name">
+                                            Rice (3) - 7pm
                                         </div>
                                     </td>
-                                    <td></td>
-                                    <td class="hover-bg ts-item" data-tsmeta="cardio">
-                                        <h6>Cardio</h6>
-                                        <span>20.00 - 22.00</span>
+                                    <td class="hover-bg ts-item" data-tsmeta="grain">
+                                        <h6>Grain</h6>
+                                        <span>4 servings</span>
                                         <div class="trainer-name">
-                                            John Smith
+                                            Oatmeal (4) - 7am
                                         </div>
                                     </td>
-                                    <td></td>
-                                    <td class="hover-bg ts-item" data-tsmeta="crossfit">
-                                        <h6>Crossfit</h6>
-                                        <span>20.00 - 21.00</span>
+                                    <td class="hover-bg ts-item" data-tsmeta="grain">
+                                        <h6>Grain</h6>
+                                        <span>3 servings</span>
                                         <div class="trainer-name">
-                                            John Smith
+                                            Whole-Grain Bread (3) - 8am
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="grain">
+                                        <h6>Grain</h6>
+                                        <span>4 servings</span>
+                                        <div class="trainer-name">
+                                            bagels (2) - 2pm
+                                        </div>
+                                        <div class="trainer-name">
+                                            Rice (2) - 8pm
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="grain">
+                                        <h6>Grain</h6>
+                                        <span>4 servings</span>
+                                        <div class="trainer-name">
+                                            Fettucini Noodles (4) - 9pm
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="grain">
+                                        <h6>Grain</h6>
+                                        <span>Log your Grain for Today</span>
+                                        <div class="trainer-name">
+                                            Head to the fridge
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="hover-bg ts-item" data-tsmeta="dairy">
+                                        <h6>Dairy</h6>
+                                        <span>3 servings</span>
+                                        <div class="trainer-name">
+                                            Milk (1) - 8am
+                                        </div>
+                                        <div class="trainer-name">
+                                            Milk (1) - 12pm
+                                        </div>
+                                        <div class="trainer-name">
+                                            Yogurt (1) - 3pm
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="dairy">
+                                        <h6>Dairy</h6>
+                                        <span>4 servings</span>
+                                        <div class="trainer-name">
+                                            Milk (2) - 8am
+                                        </div>
+                                        <div class="trainer-name">
+                                            Cheddar Cheese (2) - 7pm
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="dairy">
+                                        <h6>Dairy</h6>
+                                        <span>1 servings</span>
+                                        <div class="trainer-name">
+                                            Yogurt (1) - 3pm
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="dairy">
+                                        <h6>Dairy</h6>
+                                        <span>3 servings</span>
+                                        <div class="trainer-name">
+                                            Milk (2) - 8am
+                                        </div>
+                                        <div class="trainer-name">
+                                            Blue Cheese (1) - 4pm
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="dairy">
+                                        <h6>Dairy</h6>
+                                        <span>5 servings</span>
+                                        <div class="trainer-name">
+                                            Milk (2) - 9am
+                                        </div>
+                                        <div class="trainer-name">
+                                            yogurt (1) - 1pm
+                                        </div>
+                                        <div class="trainer-name">
+                                            Milk (2) - 9pm
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="dairy">
+                                        <h6>Dairy</h6>
+                                        <span>5 servings</span>
+                                        <div class="trainer-name">
+                                            Milk (1) - 8am
+                                        </div>
+                                        <div class="trainer-name">
+                                            Cheddar Cheese (2) - 3pm
+                                        </div>
+                                        <div class="trainer-name">
+                                            Milk (2) - 11pm
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="dairy">
+                                        <h6>Dairy</h6>
+                                        <span>Log your Dairy for Today</span>
+                                        <div class="trainer-name">
+                                            Head to the fridge
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="hover-bg ts-item" data-tsmeta="meat">
+                                        <h6>Meat & Alt</h6>
+                                        <span>3 servings</span>
+                                        <div class="trainer-name">
+                                            Milk (1) - 8am
+                                        </div>
+                                        <div class="trainer-name">
+                                            Milk (1) - 12pm
+                                        </div>
+                                        <div class="trainer-name">
+                                            Yogurt (1) - 3pm
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="meat">
+                                        <h6>Meat & Alt</h6>
+                                        <span>4 servings</span>
+                                        <div class="trainer-name">
+                                            Milk (2) - 8am
+                                        </div>
+                                        <div class="trainer-name">
+                                            Cheddar Cheese (2) - 7pm
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="meat">
+                                        <h6>Meat & Alt</h6>
+                                        <span>1 servings</span>
+                                        <div class="trainer-name">
+                                            Yogurt (1) - 3pm
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="meat">
+                                        <h6>Meat & Alt</h6>
+                                        <span>3 servings</span>
+                                        <div class="trainer-name">
+                                            Milk (2) - 8am
+                                        </div>
+                                        <div class="trainer-name">
+                                            Blue Cheese (1) - 4pm
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="meat">
+                                        <h6>Meat & Alt</h6>
+                                        <span>5 servings</span>
+                                        <div class="trainer-name">
+                                            Milk (2) - 9am
+                                        </div>
+                                        <div class="trainer-name">
+                                            yogurt (1) - 1pm
+                                        </div>
+                                        <div class="trainer-name">
+                                            Milk (2) - 9pm
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="meat">
+                                        <h6>Meat & Alt</h6>
+                                        <span>5 servings</span>
+                                        <div class="trainer-name">
+                                            Milk (1) - 8am
+                                        </div>
+                                        <div class="trainer-name">
+                                            Cheddar Cheese (2) - 3pm
+                                        </div>
+                                        <div class="trainer-name">
+                                            Milk (2) - 11pm
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="meat">
+                                        <h6>Meat & Alt</h6>
+                                        <span>Log your Meat & Alternatives for Today</span>
+                                        <div class="trainer-name">
+                                            Head to the fridge
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="hover-bg ts-item" data-tsmeta="snacks">
+                                        <h6>Snacks</h6>
+                                        <span>3 servings</span>
+                                        <div class="trainer-name">
+                                            Milk (1) - 8am
+                                        </div>
+                                        <div class="trainer-name">
+                                            Milk (1) - 12pm
+                                        </div>
+                                        <div class="trainer-name">
+                                            Yogurt (1) - 3pm
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="snacks">
+                                        <h6>Snacks</h6>
+                                        <span>4 servings</span>
+                                        <div class="trainer-name">
+                                            Milk (2) - 8am
+                                        </div>
+                                        <div class="trainer-name">
+                                            Cheddar Cheese (2) - 7pm
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="snacks">
+                                        <h6>Snacks</h6>
+                                        <span>1 servings</span>
+                                        <div class="trainer-name">
+                                            Yogurt (1) - 3pm
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="snacks">
+                                        <h6>Snacks</h6>
+                                        <span>3 servings</span>
+                                        <div class="trainer-name">
+                                            Milk (2) - 8am
+                                        </div>
+                                        <div class="trainer-name">
+                                            Blue Cheese (1) - 4pm
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="snacks">
+                                        <h6>Snacks</h6>
+                                        <span>5 servings</span>
+                                        <div class="trainer-name">
+                                            Milk (2) - 9am
+                                        </div>
+                                        <div class="trainer-name">
+                                            yogurt (1) - 1pm
+                                        </div>
+                                        <div class="trainer-name">
+                                            Milk (2) - 9pm
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="snacks">
+                                        <h6>Snacks</h6>
+                                        <span>5 servings</span>
+                                        <div class="trainer-name">
+                                            Milk (1) - 8am
+                                        </div>
+                                        <div class="trainer-name">
+                                            Cheddar Cheese (2) - 3pm
+                                        </div>
+                                        <div class="trainer-name">
+                                            Milk (2) - 11pm
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="snacks">
+                                        <h6>Snacks</h6>
+                                        <span>Log your Snacks for Today</span>
+                                        <div class="trainer-name">
+                                            Head to the fridge
                                         </div>
                                     </td>
                                 </tr>

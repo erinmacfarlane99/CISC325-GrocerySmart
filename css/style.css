@@ -1170,6 +1170,8 @@ ul, ol {
 .schedule-table table tbody tr td .trainer-name {
 	font-size: 14px;
 	color: #6b6b6b;
+	padding-left: 1em;
+	padding-right: 1em;
 }
 /*---------------------
   About Counter
