@@ -1,375 +1,196 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="zxx">
+
 <head>
-	<title></title>
-     <style>
-        header {
-    background-color: #52a32a;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    box-shadow: 0px 5px #387619, 0px 5px 25px black;
-    font-family: Arial;
-}
+	<meta charset="UTF-8">
+	<meta name="description" content="Gutim Template">
+	<meta name="keywords" content="Gutim, unica, creative, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Grocery Smart</title>
 
-    header * {
-        display: inline-block;
-        font-family: Arial;
-    }
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    header li {
-        margin: 20px;
-    }
-        header li a {
-            color: white;
-            text-decoration: none;
-            margin-bottom:5px;
-            font-size:20px;
-            font-family: Arial;
-        }
-        header li a:hover {
-            color:#b0fa8c;
-        }
-        header li p {
-            color: #204f0a;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 30px;
-            margin: 0px;
-        }
-
-#activePage {
-    color: #254615;
-    font-weight: bolder;
-}
-	     
-	     
-.popup {
-             background-color: white;
-             width: auto;
-             height: auto;
-             display: none;
-             margin: auto;
-         }
-
-         .details {
-             display: grid;
-             grid-template-columns: 50% 50%;
-             border-radius: 20px;
-         }
-
-         .item {
-             border: 1px solid rgba(0, 0, 0, 0.8);
-             text-align: left;
-             padding: 0px;
-             font-size: 20px;
-             text-align: center;
-             height: 40px;
-             vertical-align: middle;
-         }
-
-         .grid-container {
-             display: grid;
-             grid-template-columns: 33.3% 33.3% 33.3%;
-             padding: 10px;
-             width: 93%;
-             grid-gap: 30px
-         }
-
-         .grid-item {
-             border: 1px solid rgba(0, 0, 0, 0.8);
-             border-radius: 25px;
-             padding: 0px;
-             font-size: 20px;
-             text-align: left;
-             height: 200px;
-             font-family: Arial;
-
-         }
-
-         .box {
-            
-             text-align: center;
-             text-anchor: start;
-             border-radius: 25px 25px 0px 0px;
-             border: 1px solid rgba(0, 0, 0, 0.8);
-             height: 50px;
-         }
-
-         /*colours for boxes*/ 
-         #m {background-color: #dc3912;} /*meat*/
-         #v{background-color: #109618;} /*veg*/
-         #f{background-color: #ff9900;} /*fruit*/
-         #d{background-color: #3366cc;} /*dairy*/
-         #g{background-color: #9a6d25;} /*grains*/
-         #s{background-color: #990099;} /*snacks*/
-         #background{background-color: #F8F8F8;} /*grey box background*/
-
-         h2 {
-             line-height: 10px;
-             top: -300px;
-             font-family: Arial;
-         }
-
-         h3 {
-            font-family: Arial;
-         }
-
-         .button1 {
-             right: -150px;
-             top: -35px;
-             position: relative;
-             background-color: white;
-             border-radius: 8px;
-             cursor:pointer;
-        }
-        .button1:hover {
-             background-color: #2E8B57;
-         }
-        .button1 {border-radius: 8px;}
-
-    </style>
+	<!-- Css Styles -->
+	<link rel="stylesheet" href="./static/css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="./static/css/font-awesome.min.css" type="text/css">
+	<link rel="stylesheet" href="./static/css/owl.carousel.min.css" type="text/css">
+	<link rel="stylesheet" href="./static/css/magnific-popup.css" type="text/css">
+	<link rel="stylesheet" href="./static/css/slicknav.min.css" type="text/css">
+	<link rel="stylesheet" href="./static/css/style.css" type="text/css">
 </head>
+
 <body>
-	  <header>
-        <!-- navbar -->
-        <nav>
-            <ul>
-                <li><p>Grocery Smart</p></li>
-                <li><a href="home">Home</a></li>
-                <li><a href="scan">Import Groceries</a></li>
-                <li><a href="foodConsumption">Food Consumption</a></li>
-                <li><a id="activePage" href="fridge">Fridge</a></li>
-                <li><a href="notifications">Notifications</a></li>
-                <li style=" padding-top:0; position:absolute; top:0.5em; right:6em;"><a href="profile">John Doe</a></li>
-                <li style=" padding-top:0; margin-top:0px; padding-bottom:1em; position: absolute; top:0.5em; right:1em;"><img style="height:4em; width: 4em; " src="https://cdn4.iconfinder.com/data/icons/avatar-circle-1-1/72/39-512.png"></li>
-            </ul>
-        </nav>
-    </header>
-	
-	        <h2 style="padding-top:100px"> Fridge </h2>
-        <h3>Click on a category for a more detailed view!</h3>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
 
-        <p></p>
+	<!-- Header Section Begin -->
+	<header class="header-section">
+		<div class="container">
+			<div class="logo">
+				<a href="index">
+					<img src="./static/img/logo.png" alt="">
+				</a>
+			</div>
+			<div class="nav-menu">
+				<nav class="mainmenu mobile-menu">
+					<ul>
+						<li><a href="index">Home</a></li>
+						<li><a href="scan">Scan/Upload</a></li>
+						<li><a href="consumption">Consumption</a></li>
+						<li><a href="fridge">Fridge</a></li>
+						<li><a href="notifications">Notifications</a></li>
+						<li><a href="contact">Contact</a></li>
+					</ul>
+				</nav>
+				<a href="#" class="primary-btn signup-btn">Sign Up Today</a>
+			</div>
+			<div id="mobile-menu-wrap"></div>
+		</div>
+	</header>
+	<!-- Header End -->
+	<!-- Breadcrumb Section Begin -->
+	<section class="breadcrumb-section set-bg" data-setbg="./static/img/breadcrumb/classes-breadcrumb.jpg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="breadcrumb-text">
+						<h2>Fridge</h2>
+						<div class="breadcrumb-option">
+							<a href="index"><i class="fa fa-home"></i> Home</a>
+							<span>Fridge</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Breadcrumb Section End -->
+	<!-- Fridge Component -->
+	<section class="fridge-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-2"></div>
+				<div class="col-8">
+					<div class="fridge-input">
+						<h2 class="fridge-title">My Fridge</h2>
+						<input type="text" id="fridgeInput" placeholder="What's in your fridge?">
+						<span onclick="addToFridge()" class="addBtn">Add</span>
+					</div>
+					<ul id="fridgeUl" class="fridgeUl">
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
 
-        <div class="popup" id="popup1">
-            <h1>Details</h1>
-            <button onclick="close1()">close</button>
-            <div class="details" id="grain">
-                <div class=" item">Item</div>
-                <div class=" item">Expiry Date</div>
-                <div class="item">Bread</div>
-                <div class="item">March 10th</div>
-                <div class="item">Pasta</div>
-                <div class="item">April 1st</div>
-                <div class="item">Rice</div>
-                <div class="item">April 20th</div>
-            </div>
+	<script>
+		function addToFridge() {
+			let fridgeInput = $("#fridgeInput")[0];
+			let toAdd = fridgeInput.value;
+			fridgeInput.value = "";
+			if (toAdd == '')
+				return;
 
-            <div class="details" id="fruit">
-                <div class=" item">Item</div>
-                <div class=" item">Expiry Date</div>
-                <div class="item">Apples</div>
-                <div class="item">March 10th</div>
-                <div class="item">Strawberries</div>
-                <div class="item">March 12th</div>
-                <div class="item">Bananas</div>
-                <div class="item">March 20th</div>
-                <div class="item">Blueberries</div>
-                <div class="item">March 20th</div>
-            </div>
+			let list = $("#fridgeUl")[0];
+			let toAddElem = document.createElement("LI");
+			toAddElem.id = "fridgeItem";
+			toAddElem.className = "fridge-li";
+			let toAddDiv = document.createElement("DIV");
+			toAddDiv.innerHTML = toAdd;
+			toAddElem.appendChild(toAddDiv);
+			list.appendChild(toAddElem);
 
-            <div class="details" id="vegetables">
-                <div class=" item">Item</div>
-                <div class=" item">Expiry Date</div>
-                <div class="item">Cucumbers</div>
-                <div class="item">March 12th</div>
-                <div class="item">Carrots</div>
-                <div class="item">April 1st</div>
-                <div class="item">Spinach</div>
-                <div class="item">March 9th</div>
-            </div>
+			let span = document.createElement("SPAN");
+			let txt = document.createTextNode("\u00D7");
+			span.className = "remove";
+			span.appendChild(txt);
+			span.onclick = function () {
+				let div = this.parentElement.parentElement;
+				div.style.display = "none";
+			}
+			toAddDiv.appendChild(span);
+		}
+	</script>
+	<style>
+		.fridge-section {
+			padding: 50px;
+		}
 
-            <div class="details" id="meat">
-                <div class=" item">Item</div>
-                <div class=" item">Expiry Date</div>
-                <div class="item">Eggs</div>
-                <div class="item">April 1st</div>
-                <div class="item">Chicken</div>
-                <div class="item">March 18th</div>
-            </div>
+		.fridge-title {
+			padding-bottom: 10px;
+		}
 
-            <div class="details" id="dairy">
-                <div class=" item">Item</div>
-                <div class=" item">Expiry Date</div>
-                <div class="item">Milk</div>
-                <div class="item">April 6th</div>
-                <div class="item">Cheddar Cheese</div>
-                <div class="item">May 1st</div>
-                <div class="item">Yoghurt</div>
-                <div class="item">March 23rd</div>
-            </div>
+		.fridgeUl {
+			padding-top: 20px;
+		}
 
-            <div class="details" id="other">
-                <div class=" item">Item</div>
-                <div class=" item">Expiry Date</div>
-                <div class="item">Tea</div>
-                <div class="item">N/A</div>
-                <div class="item">Chips</div>
-                <div class="item">May 23rd</div>
-                <div class="item">Cookies</div>
-                <div class="item">June 1st</div>
-            </div>
-        </div>
+		.fridge-li {
+			list-style-type: none;
+			position: relative;
+			background-color: rgba(175, 175, 175, 0.4);
+			padding: 12px 8px 12px 40px;
+		}
 
-        <div class="grid-container">
-            <div class="grid-item" id="background">
-                    <div class="box" id="g">
-                    <h2>Grains</h2>
-                    <button class="button1" onclick="open1()">view</button>
-                </div>
-                <ul style="list-style-type:circle;">
-                    <li>Bread</li>
-                    <li>Pasta</li>
-                    <li>Rice</li>
-                </ul>
-            </div>
-            <div class="grid-item" id="background">
-                <div class="box" id="f">
-                    <h2>Fruit</h2>
-                    <button class="button1" onclick="open2()">view</button>
-                </div>
-                <ul style="list-style-type:circle;">
-                    <li>Apples</li>
-                    <li>Strawberries</li>
-                    <li>Bananas</li>
-                    <li>Blueberries</li>
-                </ul>
-            </div>
+		.remove {
+			position: absolute;
+			right: 0;
+			top: 0;
+			padding: 12px 16px 12px 16px;
+		}
 
-            <div class="grid-item" id="background">
-                <div class="box" id="v">
-                    <h2>Vegetables</h2>
-                    <button class="button1" onclick="open3()">view</button>
-                </div>
-                <ul style="list-style-type:circle;">
-                    <li>Cucumber</li>
-                    <li>Carrots</li>
-                    <li>Spinach</li>
-                </ul>
-            </div>
-
-            <div class="grid-item" id="background">
-                <div class="box" id="m">
-                    <h2>Meat/Protein</h2>
-                    <button class="button1" onclick="open4()">view</button>
-                </div>
-                <ul style="list-style-type:circle;">
-                    <li>Eggs</li>
-                    <li>Chicken</li>
-                </ul>
-            </div>
-
-            <div class="grid-item" id="background">
-                <div class="box" id="d">
-                    <h2>Dairy</h2>
-                    <button class="button1" onclick="open5()">view</button>
-                </div>
-                <ul style="list-style-type:circle;">
-                    <li>Milk</li>
-                    <li>Cheddar Cheese</li>
-                    <li>Yoghurt</li>
-                </ul>
-            </div>
-
-            <div class="grid-item" id="background">
-                <div class="box" id="s">
-                    <h2>Other</h2>
-                    <button class="button1" onclick="open6()">view</button>
-                </div>
-                <ul style="list-style-type:circle;">
-                    <li>Tea</li>
-                    <li>Chips</li>
-                    <li>Cookies</li>
-                </ul>
-            </div>
-        </div>
+			.remove:hover {
+				background-color: #f44336;
+				color: white;
+			}
+	</style>
+	<!-- Fridge End Component -->
+	<!-- Footer Section Begin -->
+	<footer class="footer-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="contact-option">
+						<span>Address</span>
+						<p>Queen's University</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="contact-option">
+						<span>Email</span>
+						<p>contact@grocery-smart.com</p>
+					</div>
+				</div>
+			</div>
+			<div class="copyright-text">
+				<ul>
+					<li><a href="#">Term&Use</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+				</ul>
+				<p>&copy;<p>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;
+					<script>
+						document.write(new Date().getFullYear());
+					</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				</p>
+				</p>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer Section End -->
+	<!-- Js Plugins -->
+	<script src="./static/js/jquery-3.3.1.min.js"></script>
+	<script src="./static/js/bootstrap.min.js"></script>
+	<script src="./static/js/jquery.magnific-popup.min.js"></script>
+	<script src="./static/js/mixitup.min.js"></script>
+	<script src="./static/js/jquery.slicknav.js"></script>
+	<script src="./static/js/owl.carousel.min.js"></script>
+	<script src="./static/js/main.js"></script>
 </body>
-	
-	    <script>
-        function close1() {
-            document.getElementById("popup1").style.display = "none";
-            document.getElementById("grain").style.display = "none";
-            document.getElementById("fruit").style.display = "none";
-            document.getElementById("vegetables").style.display = "none";
-            document.getElementById("meat").style.display = "none";
-            document.getElementById("dairy").style.display = "none";
-            document.getElementById("other").style.display = "none";
-        }
-        function open1() {
-            document.getElementById("popup1").style.display = "block";
-            document.getElementById("grain").style.display = "grid";
-            document.getElementById("fruit").style.display = "none";
-            document.getElementById("vegetables").style.display = "none";
-            document.getElementById("meat").style.display = "none";
-            document.getElementById("dairy").style.display = "none";
-            document.getElementById("other").style.display = "none";
-        }
 
-        function open2() {
-            document.getElementById("popup1").style.display = "block";
-            document.getElementById("fruit").style.display = "grid";
-            document.getElementById("grain").style.display = "none";
-            document.getElementById("vegetables").style.display = "none";
-            document.getElementById("meat").style.display = "none";
-            document.getElementById("dairy").style.display = "none";
-            document.getElementById("other").style.display = "none";
-        }
-
-        function open3() {
-            document.getElementById("popup1").style.display = "block";
-            document.getElementById("vegetables").style.display = "grid";
-            document.getElementById("grain").style.display = "none";
-            document.getElementById("fruit").style.display = "none";
-            document.getElementById("meat").style.display = "none";
-            document.getElementById("dairy").style.display = "none";
-            document.getElementById("other").style.display = "none";
-        }
-
-        function open4() {
-            document.getElementById("popup1").style.display = "block";
-            document.getElementById("meat").style.display = "grid";
-            document.getElementById("grain").style.display = "none";
-            document.getElementById("fruit").style.display = "none";
-            document.getElementById("vegetables").style.display = "none";
-            document.getElementById("dairy").style.display = "none";
-            document.getElementById("other").style.display = "none";
-        }
-
-        function open5() {
-            document.getElementById("popup1").style.display = "block";
-            document.getElementById("dairy").style.display = "grid";
-            document.getElementById("grain").style.display = "none";
-            document.getElementById("fruit").style.display = "none";
-            document.getElementById("vegetables").style.display = "none";
-            document.getElementById("meat").style.display = "none";
-            document.getElementById("other").style.display = "none";
-        }
-
-        function open6() {
-            document.getElementById("popup1").style.display = "block";
-            document.getElementById("other").style.display = "grid";
-            document.getElementById("grain").style.display = "none";
-            document.getElementById("fruit").style.display = "none";
-            document.getElementById("vegetables").style.display = "none";
-            document.getElementById("meat").style.display = "none";
-            document.getElementById("dairy").style.display = "none";
-        }
-    </script>
 </html>

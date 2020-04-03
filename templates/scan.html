@@ -1,208 +1,126 @@
-<!DOCTYPE html>
-<html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+﻿<!DOCTYPE html>
+<html lang="zxx">
+
 <head>
-<style>
+    <meta charset="UTF-8">
+    <meta name="description" content="Gutim Template">
+    <meta name="keywords" content="Gutim, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grocery Smart</title>
 
-div.card {
-  position: relative;
-  left: 700px;
-  width: 400px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-align: center;
-  border-radius: 8px;
-  top: -253px;
-  padding-top: 40px;
-}
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap"
+          rel="stylesheet">
 
-div.container {
-  padding: 10px;
-  font-family: Arial;
-}
-
-/*Take Photo Button*/
-.btn {
-  background-color: #72b250; 
-  border: none; /* Remove borders */
-  color: white; /* White text */
-  padding: 36px 70px; /* Some padding */
-  font-size: 14px; /* Set a font size */
-  cursor: pointer; /* Mouse pointer on hover */
-}
-  .btn:hover {
-    background-color: #2E8B57;
-  }
-  .btn {border-radius: 8px;}
-
-  /*Upload Photo Button*/
-  .btn1 {
-    background-color: #72b250; 
-    border: none; /* Remove borders */
-    color: white; /* White text */
-    padding: 36px 78px; /* Some padding */
-    font-size: 14px; /* Set a font size */
-    cursor: pointer; /* Mouse pointer on hover */
-  }
-  .btn1:hover {
-    background-color: #2E8B57;
-  }
-  .btn1 {border-radius: 8px;}
-
-table, th, td {
-  border: 1.5px solid black;
-  border-collapse: collapse;
-}
-  th, td {
-    padding: 15px;
-    text-align: center;
-    font-family: Arial;
-  }
-
-  table#t01 tr:nth-child(even) {
-    background-color: #eee;
-
-  }
-  table#t01 tr:nth-child(odd) {
-    background-color: #fff;
-  
-  }
-  table#t01 th {
-    background-color: #72b250;
-    color: white;
-  }
-
-  table {
-    position: relative;
-    left: 120px;
-    top: 170px;
-
-  }
-
-header {
-    background-color: #52a32a;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    box-shadow: 0px 5px #387619, 0px 5px 25px black;
-}
-
-    header * {
-        display: inline-block;
-        font-family: Arial;
-    }
-
-    header li {
-        margin: 20px;
-    }
-        header li a {
-            color: white;
-            text-decoration: none;
-            margin-bottom:5px;
-            font-size:20px;
-            font-family: Arial;
-        }
-        header li a:hover {
-            color:#b0fa8c;
-        }
-        header li p {
-            color: #204f0a;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 30px;
-            margin: 0px;
-        }
-
-#activePage {
-    color: #254615;
-    font-weight: bolder;
-}
-  @media only screen and (min-width: 1353px) {
-  div.card {
-  left: 900px;
-  }
-
-</style>
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="./static/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="./static/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="./static/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="./static/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="./static/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="./static/css/style.css" type="text/css">
 </head>
+
 <body>
-    <header>
-        <!-- navbar -->
-        <nav>
-            <ul>
-                <li><p>Grocery Smart</p></li>
-                <li><a href="home">Home</a></li>
-                <li><a id="activePage" href="scan">Import Groceries</a></li>
-                <li><a href="foodConsumption">Food Consumption</a></li>
-                <li><a href="fridge">Fridge</a></li>
-                <li><a href="notifications">Notifications</a></li>
-                <li style=" padding-top:0; position:absolute; top:0.5em; right:6em;"><a href="profile">John Doe</a></li>
-                <li style=" padding-top:0; margin-top:0px; padding-bottom:1em; position: absolute; top:0.5em; right:1em;"><img style="height:4em; width: 4em; " src="https://cdn4.iconfinder.com/data/icons/avatar-circle-1-1/72/39-512.png"></li>
-            </ul>
-        </nav>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container">
+            <div class="logo">
+                <a href="index">
+                    <img src="./static/img/logo.png" alt="">
+                </a>
+            </div>
+            <div class="nav-menu">
+                <nav class="mainmenu mobile-menu">
+                    <ul>
+                        <li><a href="index">Home</a></li>
+                        <li><a href="scan">Scan/Upload</a></li>
+                        <li><a href="consumption">Consumption</a></li>
+                        <li><a href="fridge">Fridge</a></li>
+                        <li><a href="notifications">Notifications</a></li>
+                        <li><a href="contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="primary-btn signup-btn">Sign Up Today</a>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
     </header>
+    <!-- Header End -->
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg" data-setbg="./static/img/breadcrumb/classes-breadcrumb.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <h2>Scan/Upload</h2>
+                        <div class="breadcrumb-option">
+                            <a href="index"><i class="fa fa-home"></i> Home</a>
+                            <span>Scan/Upload</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+    <!-- Scan Widgets! -->
+    <div id="scan_container"></div>
+    <!-- Scan Widgets End -->
+    <!-- Footer Section Begin -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="contact-option">
+                        <span>Address</span>
+                        <p>Queen's University</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-option">
+                        <span>Email</span>
+                        <p>contact@grocery-smart.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-text">
+                <ul>
+                    <li><a href="#">Term&Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+                <p>&copy;<p>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p></p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+    <!-- Js Plugins -->
+    <script src="./static/js/jquery-3.3.1.min.js"></script>
+    <script src="./static/js/bootstrap.min.js"></script>
+    <script src="./static/js/jquery.magnific-popup.min.js"></script>
+    <script src="./static/js/mixitup.min.js"></script>
+    <script src="./static/js/jquery.slicknav.js"></script>
+    <script src="./static/js/owl.carousel.min.js"></script>
+    <script src="./static/js/main.js"></script>
 
-<table style="width:38%" id="t01">
-  <tr>
-    <th>Ingredient</th>
-    <th>Best Eaten Within</th> 
-    </div>
-  </tr>
-  
-  <tr>
-    <td>Bananas</td>
-    <td>5 Days</td>
-  </tr>
-  <tr>
-    <td> Ground Beef</td> 
-    <td>3 Days</td> 
-  </tr>
-  <tr>
-    <td>Parsley</td> 
-    <td>3 Days</td> 
-  </tr>
-  <tr>
-    <td>Pasta</td> 
-    <td>1-2 Years</td> 
-  </tr>
-  <tr>
-    <td>Oranges</td> 
-    <td>1 Week</td> 
-  </tr>
-  <tr>
-    <td>Peanut Butter</td> 
-    <td>3-4 Months</td> 
-  </tr>
-  <tr>
-    <td>...</td> 
-    <td>...</td> 
-  </tr>
-  <tr>
-    <td>...</td> 
-    <td>...</td> 
-    </div>
-  </tr>
-  
-</table>
+    <!-- React Integration -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 
-
-<div class="card">
-  <div class="header">
-    <button class="btn1"><i class="fa fa-camera fa-3x"></i> <br>Take Photo</button></br> </button>
-  
-  <button class="btn"><i class="fa fa-upload fa-3x"> </i> <br>Upload Photo</button></br> </button>
-</div>
-
-<div class="container">
-    <p>Upload or take a photo of your receipt to scan the products!</p>
-  </div>
-</div>
-</div>
+    <!-- Load react components -->
+    <script src="./static/js/scan.js"></script>
 
 </body>
+
 </html>
