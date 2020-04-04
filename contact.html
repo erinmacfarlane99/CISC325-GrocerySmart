@@ -47,12 +47,75 @@
                         <li class="active"><a href="./contact.html">Contacts</a></li>
                     </ul>
                 </nav>
-                <a href="#" class="primary-btn signup-btn">Log in</a>
+                <a href="javascript:openForm()" class="primary-btn signup-btn" onclick="myFunction(this, 'red')">Log in</a>
+					<script>
+						function myFunction(elmnt, clr) {
+							elmnt.style.color = clr;
+						}
+					</script>
             </div>
             <div id="mobile-menu-wrap"></div>
         </div>
     </header>
     <!-- Header End -->
+      <!-- Login Stuff -->
+		<div class="login-popup" id="login" style="display: none;">
+			<center>
+				<form action="/contact.html" class="form-container">
+					<div class="container">
+						<div class="row">
+							<h1 style="padding-bottom: 20px;">Login</h1>
+						</div>
+
+						<div class="row" style="padding-bottom: 5px;">
+							<label class="col-4" for="email" align="left"><b>Email</b></label>
+							<input class="col-8" type="text" placeholder="Enter Email" name="email" required>
+						</div>
+						<div class="row">
+							<label class="col-4" for="psw" align="left"><b>Password</b></label>
+							<input class="col-8" type="password" placeholder="Enter Password" name="psw" required>
+						</div>
+						<div class="row" style="padding-top: 10px;padding-bottom: 0px;" align="center">
+							<div class="col-6" style="padding: 10px;">
+								<button type="submit" class="btn">Login</button>
+							</div>
+							<div class="col-6" style="padding: 10px;">
+								<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</center>
+        </div>
+        <script>
+			function openForm() {
+				document.getElementById("login").style.display = "block";
+			}
+
+			function closeForm() {
+				document.getElementById("login").style.display = "none";
+			}
+		</script>
+		<style>
+			.login-popup {
+				position: absolute;
+				left: 50%;
+				top: 30%;
+				transform: translate(-50%, 0);
+
+				background-color: rgba(125, 125, 125, 0.9);
+				border-radius: 25px;
+
+				padding-top: 25px;
+				padding-left: 25px;
+				padding-right: 25px;
+				padding-bottom: 10px;
+
+				z-index: 100;
+			}
+		</style>
+		<!-- Login Stuff -->
+		<!-- Header End -->
 
     <!-- Breadcrumb Section Begin -->
     <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb/classes-breadcrumb.jpg">
