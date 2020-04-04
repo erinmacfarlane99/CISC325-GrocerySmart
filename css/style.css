@@ -40,7 +40,6 @@ body {
     height: 100%;
     font-family: "Poppins", sans-serif;
     -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased;
 }
 
 h1,
@@ -1426,10 +1425,17 @@ ol {
 }
 
 .schedule-table table tbody tr td .trainer-name {
+<<<<<<< HEAD
     font-size: 14px;
     color: #6b6b6b;
     padding-left: 1em;
     padding-right: 1em;
+=======
+	font-size: 14px;
+	color: #6b6b6b;
+	padding-left: 1em;
+	padding-right: 1em;
+>>>>>>> e52e323652bd261327405a02d9aeef38904674bc
 }
 
 
