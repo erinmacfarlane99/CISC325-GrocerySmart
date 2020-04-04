@@ -72,9 +72,155 @@
     </section>
     <!-- Breadcrumb Section End -->
 
+
     <!-- Scan Widgets! -->
-    <div id="scan_container"></div>
+   
     <!-- Scan Widgets End -->
+
+    <!-- Ingredient/Eat Within Table Begin-->
+    <section class="classes-timetable spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <br></br>
+                    <div class="nav-controls">
+                        <ul>
+                            <li class="active" data-tsfilter="all">All Ingredients</li>
+                            <li data-tsfilter="veg">Vegetables</li>
+                            <li data-tsfilter="meat">Meat & Poultry</li>
+                            <li data-tsfilter="fruit">Fruit</li>
+                            <li data-tsfilter="dairy">Dairy</li>
+                            <li data-tsfilter="grains">Grains</li>
+                            <li data-tsfilter="snacks">Snacks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="schedule-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Ingredient</th>
+                                    <th>Best Eaten Within</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="hover-bg ts-item" data-tsmeta="meat">
+                                        <h6>Ground Beef</h6>
+                                        <div class="quantity">
+                                            You have 150g of
+                                            Ground Beef in Fridge
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="meat">
+                                        <span> 
+                                            Eat within 
+                                            3 Days
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="hover-bg ts-item" data-tsmeta="veg">
+                                        <h6>Parsley</h6>
+                                        <div class="quantity">
+                                            You have 50g of
+                                            Parsley in Fridge
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="veg">
+                                        <span>
+                                            Eat within
+                                            3 Days
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                <td class="hover-bg ts-item" data-tsmeta="fruit">
+                                    <h6>Bananas</h6>
+                                    <div class="quantity">
+                                        You have 5
+                                        Bananas in Fridge
+                                    </div>
+                                </td>
+                                <td class="hover-bg ts-item" data-tsmeta="fruit">
+                                <span> 
+                                    Eat within
+                                    5 Days
+                                </span>
+                                <tr>
+                                    <td class="hover-bg ts-item" data-tsmeta="fruit">
+                                        <h6>Oranges</h6>
+                                        <div class="quantity">
+                                            You have 3 Oranges
+                                            in Fridge
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="fruit">
+                                        <span>
+                                            Eat within
+                                            3 Days
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="hover-bg ts-item" data-tsmeta="snacks">
+                                        <h6>Peanut Butter</h6>
+                                        <div class="quantity">
+                                            You have 500g of
+                                            Peanut Butter in Fridge
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="snacks">
+                                        <span>
+                                            Eat within
+                                            3-4 Months
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="hover-bg ts-item" data-tsmeta="grains">
+                                        <h6>Pasta</h6>
+                                        <div class="quantity">
+                                            You have 1kg of Pasta
+                                            in Fridge
+                                        </div>
+                                    </td>
+                                    <td class="hover-bg ts-item" data-tsmeta="grains">
+                                        <span>
+                                            Eat within
+                                            1-2 Years
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <br></br>
+            <p>Take a photo of your receipt or upload one and the table will update!</p>
+            <button onclick="camera()" class="button camera-btn"><i class="fa fa-camera fa-lg"></i> <br>Take Photo"</button>
+            <button onclick="upload()" class="button upload-btn"><i class="fa fa-upload fa-lg"> </i> <br>Upload Photo </button></br>
+        </div>
+<script>
+    // When the user clicks on div, open the popup
+    function camera() {
+        alert("The camera function has not yet been implemented");
+    }
+    function upload() {
+        alert("The upload photo function has not yet been implemented");
+    }
+</script>
+    </section>
+    <!-- Ingredient/Eat within table End -->
+
+   
 
     <!-- Footer Section Begin -->
     <footer class="footer-section">
