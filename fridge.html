@@ -181,12 +181,12 @@
 						<p></p>
 						<div class="nav-controls">
 							<ul>
-								<li class="active" data-tsfilter="all">All Ingredients</li>
-								<li data-tsfilter="veg">Vegetables</li>
-								<li data-tsfilter="meat">Meat & Poultry</li>
-								<li data-tsfilter="fruit">Fruit</li>
-								<li data-tsfilter="dairy">Dairy</li>
+								<li class="active" data-tsfilter="all">All Groups</li>
+								<li data-tsfilter="veg">Fruits</li>
+								<li data-tsfilter="fruit">Vegetables</li>
 								<li data-tsfilter="grains">Grains</li>
+								<li data-tsfilter="dairy">Dairy</li>
+								<li data-tsfilter="meat">Meat & Poultry</li>
 								<li data-tsfilter="snacks">Snacks</li>
 								<li><div width='100%' class="fridge-input">
 									<button onclick="openAddToFridge()" class="button add-button">Add Item</button>
@@ -227,10 +227,10 @@
 										<td class="hover-bg ts-item" data-tsmeta="fruit"><span>Fruit</span></td>
 									</tr>
 									<tr>
-										<td class="hover-bg ts-item" data-tsmeta="grains"><span>Pasta</span></td>
-										<td class="hover-bg ts-item" data-tsmeta="grains"><span>1</span></td>
-										<td class="hover-bg ts-item" data-tsmeta="grains"><span>01-04-2021</span></td>
-										<td class="hover-bg ts-item" data-tsmeta="grains"><span>Grains</span></td>
+										<td class="hover-bg ts-item" category="Grains" ><span>Pasta</span></td>
+										<td class="hover-bg ts-item" category="Grains" ><span>1</span></td>
+										<td class="hover-bg ts-item" category="Grains" ><span>01-04-2021</span></td>
+										<td class="hover-bg ts-item" category="Grains" ><span>Grains</span></td>
 									</tr>
 
 								</tbody>
@@ -297,35 +297,34 @@
 				let quantity = document.getElementById('quantity').value;
 				let expiry = document.getElementById('expiry').value;
 				let category = document.getElementById('category').value;
-
-				if(category.toUpperCase == 'FRUIT' ||
-					category.toUpperCase == 'FRUITS'){
-					category = 'Fruit'; 
+				
+				// Categorises the new item but is case sensitive
+				if (category == 'Fruit' ||
+					category == 'Fruits') {
+					category = 'Fruits';
 				}
-				else if (category.toUpperCase == 'VEGETABLES') {
-					category = 'Vegetables'; 
+				else if (category == 'Vegetables' ||
+					category == 'Vegetable') {
+					category = 'Vegetables';
 				}
-				else if (category.toUpperCase == 'MEAT AND POULTRY' || 
-						category.toUpperCase == 'MEAT & POULTRY' || 
-							category.toUpperCase == 'MEAT' ||
-								category.toUpperCase == 'POULTRY') {
-					category = 'Meat & Poultry'; 
+				else if (category == 'Meat and Poultry' ||
+					category == 'Meat & Poultry' ||
+					category == 'Meat' ||
+					category == 'Poultry') {
+					category = 'Meat & Poultry';
 				}
-				else if (category.toUpperCase == 'DAIRY') {
-					category = 'Dairy'; 
+				else if (category == 'Dairy') {
+					category = 'Dairy';
 				}
-				else if (category.toUpperCase == 'GRAINS') {
+				else if (category == 'Grains') {
 					category = 'Grains';
 				}
-				else if (category.toUpperCase == 'SNACKS' ||
-					category.toUpperCase == 'SNACKS') {
+				else if (category == 'Snacks' ||
+					category == 'Snack') {
 					category = 'Snacks';
 				}
-				else {
-					category = 'Snacks';
-				}
-
-
+				else { category = 'Snacks'; } //Default to Snacks
+				
 				
 				console.log(item);
 				console.log(quantity);
