@@ -39,7 +39,6 @@
 					<nav class="mainmenu mobile-menu">
 						<ul>
 							<li><a href="./index.html">Home</a></li>
-							<li><a href="./scan.html">Scan/Upload</a></li>
 							<li><a href="./consumption.html">Consumption</a></li>
 							<li class="active"><a href="./fridge.html">Fridge</a></li>
 							<li><a href="./notifications.html">Notifications</a></li>
@@ -156,7 +155,8 @@
 							<input class="col-8" placeholder="Enter Expiry Date" id="expiry" name="expiry">
 						</div>
 						<div class="row">
-							<label class="col-4" for="category" align="left"><b>Category</b></label>
+							<label class="col-4" for="category" align="left"><b>Category  </b> <div class="popup" onmouseover="popUp()"><i class="fa fa-info-circle"></i>
+  								<span class="popuptext" id="myPopup">Enter category: Fruit, Vegetables, Meat & Poultry, Dairy, Grains, Snacks</span></div></label>
 							<input class="col-8" placeholder="Enter Food Category" id="category" name="category">
 						</div>
 						<div class="row" style="padding-top: 10px;padding-bottom: 0px;" align="center">
@@ -176,19 +176,21 @@
 		<section class="classes-timetable spad">
 			<div class="container">
 				<div class="row" style="padding-top: 20px">
+					
 					<div class="col-lg-12">
-						<div width='100%' class="fridge-input">
-							<a style="text-align: center" href="javascript:openAddToFridge()" 
-								class="primary-btn signup-btn">Add Item</a>
-						</div>
+						<p></p>
 						<div class="nav-controls">
 							<ul>
-								<li class="active" data-tsfilter="all">All Items</li>
-								<li data-tsfilter="gym">Dairy</li>
-								<li data-tsfilter="all">Grains</li>
-								<li data-tsfilter="all">Meat</li>
-								<li data-tsfilter="all">Fruit & Vegetables</li>
-								<li data-tsfilter="all">Other</li>
+								<li class="active" data-tsfilter="all">All Ingredients</li>
+								<li data-tsfilter="veg">Vegetables</li>
+								<li data-tsfilter="meat">Meat & Poultry</li>
+								<li data-tsfilter="fruit">Fruit</li>
+								<li data-tsfilter="dairy">Dairy</li>
+								<li data-tsfilter="grains">Grains</li>
+								<li data-tsfilter="snacks">Snacks</li>
+								<li><div width='100%' class="fridge-input">
+									<button onclick="openAddToFridge()" class="button add-button">Add Item</button>
+								</div></li>
 							</ul>
 						</div>
 					</div>
@@ -207,29 +209,52 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td class="hover-bg ts-item" data-tsmeta="gym"><span>Bread</span></td>
-										<td class="hover-bg ts-item" data-tsmeta="gym"><span>1</span></td>
-										<td class="hover-bg ts-item" data-tsmeta="gym"><span>4 days</span></td>
-										<td class="hover-bg ts-item" data-tsmeta="gym"><span>Grains</span></td>
+										<td class="hover-bg ts-item" data-tsmeta="dairy"><span>Milk</span></td>
+										<td class="hover-bg ts-item" data-tsmeta="dairy"><span>2</span></td>
+										<td class="hover-bg ts-item" data-tsmeta="dairy"><span>01-04-2020</span></td>
+										<td class="hover-bg ts-item" data-tsmeta="dairy"><span>Dairy</span></td>
 									</tr>
 									<tr>
-										<td class="hover-bg ts-item" data-tsmeta="gym"><span>Apples</span></td>
-										<td class="hover-bg ts-item" data-tsmeta="gym"><span>4</span></td>
-										<td class="hover-bg ts-item" data-tsmeta="gym"><span>7 days</span></td>
-										<td class="hover-bg ts-item" data-tsmeta="gym"><span>Fruit</span></td>
+										<td class="hover-bg ts-item" data-tsmeta="grains"><span>Bread</span></td>
+										<td class="hover-bg ts-item" data-tsmeta="grains"><span>1</span></td>
+										<td class="hover-bg ts-item" data-tsmeta="grains"><span>09-04-2020</span></td>
+										<td class="hover-bg ts-item" data-tsmeta="grains"><span>Grains</span></td>
 									</tr>
 									<tr>
-										<td class="hover-bg ts-item" data-tsmeta="gym"><span>Milk</span></td>
-										<td class="hover-bg ts-item" data-tsmeta="gym"><span>2</span></td>
-										<td class="hover-bg ts-item" data-tsmeta="gym"><span>01-04-2020</span></td>
-										<td class="hover-bg ts-item" data-tsmeta="gym"><span>Dairy</span></td>
+										<td class="hover-bg ts-item" data-tsmeta="fruit"><span>Apples</span></td>
+										<td class="hover-bg ts-item" data-tsmeta="fruit"><span>4</span></td>
+										<td class="hover-bg ts-item" data-tsmeta="fruit"><span>10-04-2020</span></td>
+										<td class="hover-bg ts-item" data-tsmeta="fruit"><span>Fruit</span></td>
 									</tr>
+									<tr>
+										<td class="hover-bg ts-item" data-tsmeta="grains"><span>Pasta</span></td>
+										<td class="hover-bg ts-item" data-tsmeta="grains"><span>1</span></td>
+										<td class="hover-bg ts-item" data-tsmeta="grains"><span>01-04-2021</span></td>
+										<td class="hover-bg ts-item" data-tsmeta="grains"><span>Grains</span></td>
+									</tr>
+
 								</tbody>
 							</table>
 						</div>
 					</div>
 				</div>
 			</div>
+		<div class="section-title">
+			<br></br>
+			<p>Take a photo of your receipt or upload one to add items to your Fridge!</p>
+			<button onclick="camera()" class="button camera-btn"><i class="fa fa-camera fa-lg"></i> <br>Take Photo"</button>
+			<button onclick="upload()" class="button upload-btn"><i class="fa fa-upload fa-lg"> </i> <br>Upload Photo
+			</button></br>
+		</div>
+		<script>
+			// When the user clicks on div, open the popup
+			function camera() {
+				alert("The camera function has not yet been implemented");
+			}
+			function upload() {
+				alert("The upload photo function has not yet been implemented");
+			}
+		</script>
 		</section>
 
 		<style>
@@ -252,6 +277,12 @@
 		</style>
 
 		<script>
+			
+			function popUp() {
+					var popup = document.getElementById("myPopup");
+					popup.classList.toggle("show");
+			}
+
 			function openAddToFridge() {
 				document.getElementById("addToFridge").style.display = "block";
 			}
@@ -266,9 +297,35 @@
 				let quantity = document.getElementById('quantity').value;
 				let expiry = document.getElementById('expiry').value;
 				let category = document.getElementById('category').value;
-				if(category == ''){
-					category = 'Other'; // default table 
+
+				if(category.toUpperCase == 'FRUIT' ||
+					category.toUpperCase == 'FRUITS'){
+					category = 'Fruit'; 
 				}
+				else if (category.toUpperCase == 'VEGETABLES') {
+					category = 'Vegetables'; 
+				}
+				else if (category.toUpperCase == 'MEAT AND POULTRY' || 
+						category.toUpperCase == 'MEAT & POULTRY' || 
+							category.toUpperCase == 'MEAT' ||
+								category.toUpperCase == 'POULTRY') {
+					category = 'Meat & Poultry'; 
+				}
+				else if (category.toUpperCase == 'DAIRY') {
+					category = 'Dairy'; 
+				}
+				else if (category.toUpperCase == 'GRAINS') {
+					category = 'Grains';
+				}
+				else if (category.toUpperCase == 'SNACKS' ||
+					category.toUpperCase == 'SNACKS') {
+					category = 'Snacks';
+				}
+				else {
+					category = 'Snacks';
+				}
+
+
 				
 				console.log(item);
 				console.log(quantity);
