@@ -45,7 +45,19 @@
 							<li><a href="./contact.html">Contacts</a></li>
 						</ul>
 					</nav>
-					<a href="javascript:openForm()" class="primary-btn signup-btn" onclick="myFunction(this, 'red')">Log in</a>
+					<script>
+						function textChange() {
+							var email = document.getElementById("emailEntry");
+							if (email.value == null || email.value == "") {
+								document.getElementById("loginText").innerHTML = "Log In";
+							}
+							else {
+								document.getElementById("loginText").innerHTML = email.value;
+							}
+						}
+					</script>
+					<a id="loginText" href="javascript:openForm()" class="primary-btn signup-btn" onclick="myFunction(this, 'red')">Log
+						In</a>
 					<script>
 						function myFunction(elmnt, clr) {
 							elmnt.style.color = clr;
@@ -67,7 +79,7 @@
 
 						<div class="row" style="padding-bottom: 5px;">
 							<label class="col-4" for="email" align="left"><b>Email</b></label>
-							<input class="col-8" type="text" placeholder="Enter Email" name="email" required>
+							<input class="col-8" id="emailEntry" type="text" placeholder="Enter Email" name="email" required>
 						</div>
 						<div class="row">
 							<label class="col-4" for="psw" align="left"><b>Password</b></label>
@@ -75,7 +87,7 @@
 						</div>
 						<div class="row" style="padding-top: 10px;padding-bottom: 0px;" align="center">
 							<div class="col-6" style="padding: 10px;">
-								<button type="submit" class="btn">Login</button>
+								<button type="submit" class="btn" onclick="textChange()">Login</button>
 							</div>
 							<div class="col-6" style="padding: 10px;">
 								<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
